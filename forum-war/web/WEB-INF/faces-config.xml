@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.0"
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    <managed-bean>
+        <managed-bean-name>TopicBean</managed-bean-name>
+        <managed-bean-class>manageBeans.TopicBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>AuthBean</managed-bean-name>
+        <managed-bean-class>manageBeans.AuthBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>login</property-name>
+            <property-class>java.lang.String</property-class>
+            <value>Login</value>
+        </managed-property>
+        <managed-property>
+            <property-name>password</property-name>
+            <property-class>java.lang.String</property-class>
+            <value>Password</value>
+        </managed-property>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>ThreadBean</managed-bean-name>
+        <managed-bean-class>manageBeans.ThreadBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <description>forwarding to front page</description>
+            <from-outcome>home</from-outcome>
+            <to-view-id>/pages/forum.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deniedAccess</from-outcome>
+            <to-view-id>/pages/denied.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>showThread</from-outcome>
+            <to-view-id>/pages/thread.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>showTopic</from-outcome>
+            <to-view-id>/pages/topic.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>RegisterBean</managed-bean-name>
+        <managed-bean-class>manageBeans.RegisterBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/pages/register.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>registered</from-outcome>
+            <to-view-id>/pages/registered.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>PostBean</managed-bean-name>
+        <managed-bean-class>manageBeans.PostBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/pages/thread.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>createPost</from-outcome>
+            <to-view-id>/pages/create.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>updatePost</from-outcome>
+            <to-view-id>/pages/update.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/pages/topic.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>createThread</from-outcome>
+            <to-view-id>/pages/newthread.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>updateThread</from-outcome>
+            <to-view-id>/pages/updatethread.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/pages/menu.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>register</from-outcome>
+            <to-view-id>/pages/register.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>settings</from-outcome>
+            <to-view-id>/pages/settings.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>SettingsBean</managed-bean-name>
+        <managed-bean-class>manageBeans.SettingsBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/pages/settings.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>administrate</from-outcome>
+            <to-view-id>/pages/admininstration.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

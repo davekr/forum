@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="index.jsp" x="297" y="423" zoom="true"/>
+        <Node id="*" x="334" y="179" zoom="false"/>
+        <Node id="pages/registered.jsp" x="36" y="317" zoom="true"/>
+        <Node id="pages/settings.jsp" x="131" y="-111" zoom="true"/>
+        <Node id="pages/update.jsp" x="540" y="-98" zoom="true"/>
+        <Node id="pages/include/footer.html" x="34" y="458" zoom="true"/>
+        <Node id="pages/thread.jsp" x="453" y="16" zoom="true"/>
+        <Node id="pages/denied.jsp" x="304" y="-39" zoom="true"/>
+        <Node id="pages/include/head.jsp" x="44" y="420" zoom="true"/>
+        <Node id="pages/forum.jsp" x="277" y="318" zoom="true"/>
+        <Node id="pages/topic.jsp" x="570" y="337" zoom="true"/>
+        <Node id="pages/admininstration.jsp" x="59" y="112" zoom="true"/>
+        <Node id="pages/register.jsp" x="44" y="196" zoom="true"/>
+        <Node id="pages/create.jsp" x="649" y="115" zoom="true"/>
+        <Node id="pages/updatethread.jsp" x="546" y="469" zoom="true"/>
+        <Node id="pages/newthread.jsp" x="585" y="190" zoom="true"/>
+        <Node id="pages/menu.jsp" x="52" y="-28" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
